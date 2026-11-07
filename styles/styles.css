@@ -1,0 +1,175 @@
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* CONTENEDOR HERO */
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../assets/Parte principal/coffee_image.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 60px 60px 60px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Capa de oscurecimiento */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* BARRA SUPERIOR (NAVBAR) */
+.Barrasuperior {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.Barrasuperior .logo img {
+    height: 38px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Botones base */
+.btn {
+    font-family: 'Playfair Display', serif;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Botones  (Sign Up / Order Now) */
+.btn-gold, 
+.Signu, 
+#ordenar {
+    background-color: #F9C06A;
+    color: #1E1E1E;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-gold:hover, 
+.Signu:hover, 
+#ordenar:hover {
+    background-color: #e5af5d;
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+/* CONTENIDO HERO  */
+.Principal {
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+    margin-bottom: auto;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* 1. Subtítulo superior */
+.hero-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 15px; 
+}
+
+/* 2. Título principal*/
+.hero-title, 
+.Principal h1 {
+    font-family: 'Clicker Script', cursive;
+    font-size: 220px; 
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1;
+    margin: 0 0 25px -10px; 
+}
+
+/* 3. Párrafo descriptivo */
+.hero-description, 
+.Principal p:not(.hero-subtitle) {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 35px; 
+}
+
+/* Adaptación Responsiva */
+@media (max-width: 1024px) {
+    .hero-title, .Principal h1 {
+        font-size: 110px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-section {
+        padding: 30px 20px;
+    }
+    
+    .nav-links {
+        display: none; 
+    }
+
+    .hero-title, .Principal h1 {
+        font-size: 85px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .hero-description, .Principal p:not(.hero-subtitle) {
+        font-size: 16px;
+    }
+}
