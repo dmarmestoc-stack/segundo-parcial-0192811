@@ -1,175 +1,888 @@
-*{
-    
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+  --fondo: #fffefc;
+  --marron: #603809;
+  --marron-oscuro: #442808;
+  --dorado: #f9c06a;
+  --negro: #1e1e1e;
+  --gris: #707070;
+  --crema: #fff9f1;
+  --crema-fuerte: #ffeed8;
+  --borde: rgba(249, 192, 106, 0.42);
+  --sombra-boton: 0 6px 12px rgba(249, 192, 106, 0.22);
+  --fuente: "Playfair Display", serif;
+  --fuente-script: "Clicker Script", cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;  
+}
+
+html, body {
+  overflow-x: hidden;      
+}
+
+body {
+  background: var(--fondo);
+  color: var(--negro);
+  font-family: var(--fuente);
+}
+
+a {
+color: inherit;
+text-decoration: none;
+}
+ul {
+list-style: none;
+}
+img {
+display: block;
+}
+
+h1, h2, h3, h4, p, a, li, button, address { 
+white-space: nowrap; 
+}
+
+section, header, footer {
+position: relative;
+}
+section {
+z-index: 1; 
+}
+
+.contenedor {
+  position: relative;
+  width: 1180px;
+  margin: 0 auto;
+}
+
+.boton,
+.boton-registrar {
+  display: block;
+  width: 134px;
+  height: 48px;
+  padding-top: 14px;
+  border-radius: 24px;
+  background: var(--dorado);
+  box-shadow: var(--sombra-boton);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  text-align: center;
+  transition: filter 0.2s, transform 0.2s;
+}
+.boton:hover,
+.boton-registrar:hover {
+  filter: brightness(0.95);
+  transform: translateY(-1px);
+}
+.boton-registrar {
+  width: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+}
+
+.titulo-seccion {
+  color: var(--marron);
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 72px;
+  text-align: center;
+}
+.titulo_nosotros {
+ text-align: left;
+}
+
+.texto-seccion {
+  margin-top: 16px;
+  color: var(--gris);
+  font-size: 20px;
+  line-height: 34px;
+  text-align: center;
+}
+
+.salpicadura {
+  position: absolute;
+}
+
+.portada {
+   height: 768px;
+  background:
+    linear-gradient(90deg, #1e1e1e -7%, rgba(0, 0, 0, 0) 87.5%),
+    url("../assets/Portada/coffee_image.png") center / cover;
+  color: #fff;
+}
+
+.navegacion {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 88px;
+}
+.navegacion_logo {
+  font-family: var(--fuente-script);
+  font-size: 35px;
+  line-height: 46px;
+}
+.navegacion_enlaces {
+  position: absolute;
+  left: 400px;             
+  display: flex;
+  gap: 59px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.navegacion_enlaces a:hover {
+color: var(--dorado); 
+}
+.navegacion_ingresar {
+  position: absolute;
+  left: 1000px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.contenido_portada {
+margin-top: 95px;
+}
+
+.subtitulo {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 29px;
+}
+.portada_titulo {
+  font-family: var(--fuente-script);
+  font-size: 220px;
+  font-weight: 400;
+  line-height: 291px;
+}
+.portada_texto {
+  font-size: 20px;
+  line-height: 34px;
+}
+.contenido_portada .boton {
+margin-top: 20px; 
+}
+.nosotros {
+  margin-top: 82px;
+}
+.contenedor_nosotros {
+  display: flex;
+  justify-content: space-between;   
+  height: 484px;
+}
+.contenido_nosotros {
+padding-top: 68px; 
+}
+.nosotros_texto {
+  margin: 29px 0;
+  color: var(--gris);
+  font-size: 20px;
+  line-height: 34px;
+}
+.nosotros_foto {
+  width: 500px;
+  height: 484px;
+}
+.nosotros_foto img {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;        
+}
+.salpicadura_cafe_nosotros {
+  top: 339px;
+  left: 0;
+}
+
+.menu {
+  margin-top: 82px;
+}
+.cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 32px;
+}
+.tarjeta {
+  position: relative;
+  width: 280px;
+  height: 388px;
+}
+.tarjeta_fotos {                    
+  height: 364px;
+  background: var(--crema);
+  border: 1px solid var(--borde);
+  text-align: center;
+}
+.tarjeta_foto {
+  width: 280px;
+  height: 222px;
+  margin: -1px -1px 0;             
+}
+.tarjeta_nombre {
+  margin-top: 14px;
+  color: var(--marron);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 29px;
+}
+.tarjeta_composicion {
+  margin-top: 6px;
+  font-size: 16px;
+  line-height: 21px;
+}
+.tarjeta_precio {
+  margin-top: 6px;
+  color: var(--dorado);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.tarjeta .boton {                  
+  position: absolute;
+  bottom: 0;
+  left: 73px;
+}
+.salpicadura_cafe_menu {
+  top: 508px;
+  right: 0;
+  transform: scaleX(-1);           
+}
+
+.plus {
+  margin-top: 82px;
+}
+.caracteristicas {
+  display: flex;
+  gap: 20px;
+  margin-top: 32px;
+}
+.caracteristica,
+.caracteristica-plus {
+  width: 280px;
+  height: 284px;
+  padding-top: 36px;
+  background: var(--crema);
+  box-shadow: inset 0 0 0 1px var(--borde);   
+  text-align: center;
+}
+.caracteristica-plus {                      
+  background: var(--crema-fuerte);
+  box-shadow: none;
+}
+.caracteristica img,
+.caracteristica-plus img {
+  width: 88px;
+  height: 88px;
+  margin: 0 auto;
+}
+.caracteristica h3,
+.caracteristica-plus h3 {
+  margin-top: 25px;
+  color: var(--marron);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 37px;
+}
+.caracteristica p,
+.caracteristica-plus p {
+  margin-top: 8px;
+  color: var(--gris);
+  font-size: 20px;
+  line-height: 27px;
+}
+.unetenos {
+  margin: 26px 0 20px;
+  color: var(--gris);
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+}
+.plus .boton { 
+margin: 0 auto; 
+}
+
+.oferta {
+  height: 574px;
+  margin: 64px 0 0 21px;           
+  padding-right: 21px;          
+  overflow: hidden;
+  background: url("../assets/Ordenar/Group 36.png") 0 0 / cover;  
+}
+.oferta-estructura {
+  height: 574px;
+  padding: 135px 0 0 21px;
+}
+.oferta-titulo {
+  color: #fff;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 72px;
+}
+.oferta-texto {
+  margin: 22px 0 22px 4px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 34px;
+}
+.granos {                           
+  position: absolute;
+  top: 0;
+  left: 761px;
+  width: 512px;
+  height: 574px;
+}
+.mug {                            
+  position: absolute;
+  top: 52px;
+  left: 809px;
+  width: 324px;
+  height: 491px;
+}
+
+.manager {
+  margin-top: 100px;
+  padding-bottom: 56px;            
+  overflow: hidden;
+}
+.manager-tarjeta {
+  position: relative;
+  width: 980px;
+  height: 524px;
+  margin: 45px auto 0;
+  padding-top: 129px;
+  background: var(--crema);
+  box-shadow: inset 0 0 0 1px var(--borde);
+  text-align: center;
+}
+.manager-comillas {                
+  position: absolute;
+  top: 54px;
+  left: 29px;
+  color: var(--marron);
+  font-size: 220px;
+  font-weight: 700;
+  line-height: 112px;
+}
+.manager-texto {
+  width: 780px;
+  margin: 0 auto;
+  color: var(--gris);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 36px;
+}
+.manager-nombre {
+  margin-top: 33px;
+  color: var(--marron);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 43px;
+}
+.manager-cargo {
+  margin-top: 4px;
+  color: var(--gris);
+  font-size: 20px;
+  line-height: 34px;
+}
+.manager-foto {                     
+  position: absolute;
+  bottom: -74px;                   
+  left: 50%;
+  width: 136px;
+  height: 136px;
+  margin-left: -68px;
+}
+
+.boton-flecha {
+  position: absolute;
+  top: 50%;
+  width: 82px;
+  height: 82px;
+  margin-top: -41px;
+  transition: filter 0.2s;
+}
+.boton-flecha:hover {
+filter: brightness(0.95); 
+}
+.boton-flecha-izq {
+left: -41px; 
+}
+.boton-flecha-der {
+right: -41px;
+}
+.boton-flecha img {
+  position: absolute;
+  top: -6px;
+  left: -12px;
+  width: 106px;
+  height: 106px;
+}
+
+.salpicadura_cafe_2 {
+  top: 49px;
+  right: 0;
+}
+.salpicadura_cafe_3 {
+  top: 521px;
+  left: 0;
+}
+
+.suscribir {
+  margin-top: 82px;
+  padding: 80px 0;
+  background: url("../assets/Buscador y ft/Group 46.png") center / cover;
+}
+.suscribir .titulo-seccion,
+.suscribir .texto-seccion { 
+color: #fff; 
+}
+
+.informacion-suscribir {
+  position: relative;
+  width: 1180px;
+  margin: 0 auto;
+}
+.email-suscribir {
+  position: relative;
+  width: 642px;
+  height: 66px;
+  margin: 26px auto 0;
+}
+.email-suscribir input {
+  width: 100%;
+  height: 66px;
+  padding: 0 160px 0 26px;
+  background: var(--crema);
+  border: 1px solid var(--borde);
+  border-radius: 4px;
+  outline: none;
+  font: 400 20px/34px var(--fuente);
+  color: var(--negro);
+}
+.email-suscribir input::placeholder {
+  color: rgba(0, 0, 0, 0.34);
+  opacity: 1;
+}
+.email-suscribir input:focus {
+  border-color: var(--dorado);
+  box-shadow: 0 0 0 3px rgba(249, 192, 106, 0.35);
+}
+.email-suscribir button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 137px;
+  height: 66px;
+  border: 0;
+  border-radius: 4px;
+  background: var(--dorado);
+  box-shadow: var(--sombra-boton);
+  color: var(--marron);
+  font: 700 22px/29px var(--fuente);
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+.email-suscribir button:hover {
+filter: brightness(0.95);
+}
+
+.suscribir-contenido {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+}
+.taza {
+  position: absolute;
+  top: 138px;
+  height: 358px;
+}
+.taza2-suscribir {
+left: 0;  
+width: 297px;
+}  
+.taza-suscribir  {
+right: 0; 
+width: 285px;
+} 
+
+.footer {
+  height: 492px;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--marron-oscuro);
+  color: #fff;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../assets/Buscador y ft/fotter_image.png") center / cover;
+  mix-blend-mode: overlay;
+}
+.contenido-footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 380px 136px 134px 332px;   
+  column-gap: 66px;
+  width: 1180px;
+  margin: 0 auto;
+  padding-top: 162px;
+}
+
+.logo {
+  font-family: var(--fuente-script);
+  font-size: 54px;
+  line-height: 71px;
+}
+.footer-izq p {
+  width: 380px;
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 22px;
+  white-space: normal;
+}              
+.redes-sociales {
+  margin-top: 33px;
+}
+
+.footer-der h4 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 35px;
+}
+.footer-der ul { 
+margin-top: 55px;
+}
+.footer-der li {
+  font-size: 18px;
+  line-height: 42px;
+}
+.footer-der a:hover,
+.footer-contacto a:hover {
+color: var(--dorado);
+}
+
+.footer-contacto h4 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 35px;
+}
+.footer-contacto address {
+  margin: 31px 0 28px;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 24px;
+}
+.linea {
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 22px; 
 }
 
 
-/* CONTENEDOR HERO */
-.hero-section {
-    position: relative;
+@media (max-width: 1240px) {
+
+  h1, h2, h3, h4, p, li, address {
+     white-space: normal; 
+    }
+  br {
+     display: none; 
+    }
+
+  .contenedor,
+  .informacion-suscribir,
+  .contenido-footer {
+     width: calc(100% - 48px);
+     }
+
+ 
+  .salpicadura,
+  .taza,
+  .granos {
+     display: none;
+     }
+
+ 
+  .titulo-seccion {
+    font-size: clamp(30px, 5vw, 54px);
+    line-height: 1.3;
+  }
+  .texto-seccion {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .portada {
+    height: auto;
+    padding-bottom: 80px;
+  }
+  .navegacion { 
+    gap: 24px;
+   }
+  .navegacion_enlaces {
+    position: static;
+    flex: 1;
+    justify-content: center;
+    gap: 36px;
+  }
+  .navegacion_ingresar { 
+    position: static;
+   }
+  .portada_titulo {
+    font-size: clamp(110px, 22vw, 220px);
+    line-height: 1.3;
+  }
+  .portada_texto { 
+    max-width: 527px;
+   }
+
+  .nosotros {
+     margin-top: 64px;
+     }
+  .contenedor_nosotros {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    height: auto;
+  }
+  .contenido_nosotros {
     width: 100%;
-    min-height: 100vh;
-    background-image: url('../assets/Parte principal/coffee_image.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    max-width: 585px;
+    padding-top: 0;
+  }
+  .nosotros_texto { 
+    font-size: 18px; 
+  }
+  .nosotros_foto {
+    width: min(500px, 100%);
+    height: auto;
+    aspect-ratio: 500 / 484;
+  }
+
+  .menu,
+  .plus { 
+    margin-top: 64px;
+   }
+  .cards,
+  .caracteristicas {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .unetenos {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .oferta {
+    height: auto;
+    margin: 64px 0 0;
+    padding-right: 0;
+    background-position: center;
+  }
+  .oferta-estructura {
     display: flex;
     flex-direction: column;
-    padding: 40px 60px 60px 60px;
-    overflow: hidden;
-    box-sizing: border-box;
-}
-
-/* Capa de oscurecimiento */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.25);
-    z-index: 1;
-    pointer-events: none;
-}
-
-/* BARRA SUPERIOR (NAVBAR) */
-.Barrasuperior {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.Barrasuperior .logo img {
-    height: 38px;
-    object-fit: contain;
-}
-
-.nav-links {
-    display: flex;
-    gap: 35px;
-}
-
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-/* Botones base */
-.btn {
-    font-family: 'Playfair Display', serif;
-    background: none;
-    border: none;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: opacity 0.2s ease;
-}
-
-.btn:hover {
-    opacity: 0.8;
-}
-
-/* Botones  (Sign Up / Order Now) */
-.btn-gold, 
-.Signu, 
-#ordenar {
-    background-color: #F9C06A;
-    color: #1E1E1E;
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 16px;
-    padding: 12px 30px;
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease, background-color 0.2s ease;
-    white-space: nowrap;
-}
-
-.btn-gold:hover, 
-.Signu:hover, 
-#ordenar:hover {
-    background-color: #e5af5d;
-    opacity: 1;
-    transform: translateY(-2px);
-}
-
-/* CONTENIDO HERO  */
-.Principal {
-    position: relative;
-    z-index: 2;
-    margin-top: auto;
-    margin-bottom: auto;
-    max-width: 520px;
+    height: auto;
+    padding: 64px 0;
+    text-align: center;
+  }
+  .oferta-contenido {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-}
+    align-items: center;
+  }
+  .oferta-titulo {
+    font-size: clamp(30px, 5vw, 54px);
+    line-height: 1.3;
+  }
+  .oferta-texto {
+     margin-left: 0; 
+    }
+  .mug {
+    position: static;
+    width: 264px;
+    height: auto;
+    margin-top: 28px;
+  }
 
-/* 1. Subtítulo superior */
-.hero-subtitle {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 15px; 
-}
+  .manager {
+     margin-top: 64px;
+     }
+  .manager-tarjeta {
+    width: 100%;
+    height: auto;
+    min-height: 524px;
+    margin-top: 32px;
+    padding: 110px 24px 120px;
+  }
+  .manager-texto {
+    width: auto;
+    max-width: 780px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+  .manager-comillas {
+    top: 24px;
+    left: 24px;
+    font-size: 160px;
+    line-height: 90px;
+  }
+  .boton-flecha {
+    top: auto;
+    bottom: 24px;
+    margin-top: 0;
+  }
+  .boton-flecha-izq {
+     left: 24px;
+     }
+  .boton-flecha-der {
+     right: 24px; 
+    }
 
-/* 2. Título principal*/
-.hero-title, 
-.Principal h1 {
-    font-family: 'Clicker Script', cursive;
-    font-size: 220px; 
-    font-weight: 400;
-    color: #ffffff;
-    line-height: 1;
-    margin: 0 0 25px -10px; 
-}
+  .suscribir {
+    margin-top: 64px;
+    padding: 64px 0;
+  }
+  .email-suscribir {
+     width: min(642px, 100%);
+     }
 
-/* 3. Párrafo descriptivo */
-.hero-description, 
-.Principal p:not(.hero-subtitle) {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.95);
-    margin-bottom: 35px; 
-}
-
-/* Adaptación Responsiva */
-@media (max-width: 1024px) {
-    .hero-title, .Principal h1 {
-        font-size: 110px;
+  .footer { 
+    height: auto;
+   }
+  .contenido-footer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 32px;
+    padding: 64px 0;
+  }
+  .footer-izq p { 
+    width: auto;
+   }
+  .footer-der ul { 
+    margin-top: 16px;
+   }
+  .footer-contacto address {
+     margin-top: 16px; 
     }
 }
 
-@media (max-width: 900px) {
-    .hero-section {
-        padding: 30px 20px;
-    }
-    
-    .nav-links {
-        display: none; 
-    }
 
-    .hero-title, .Principal h1 {
-        font-size: 85px;
-    }
+@media (max-width: 768px) {
 
-    .hero-subtitle {
-        font-size: 18px;
-    }
+  .contenedor,
+  .informacion-suscribir,
+  .contenido-footer {
+     width: calc(100% - 40px);
+     }
 
-    .hero-description, .Principal p:not(.hero-subtitle) {
-        font-size: 16px;
-    }
+  .portada {
+    background:
+      linear-gradient(rgba(30, 30, 30, 0.72), rgba(30, 30, 30, 0.45)),
+      url("../assets/Portada/coffee_image.png") 68% center / cover;
+    padding-bottom: 64px;
+  }
+  .navegacion {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 16px 0;
+    row-gap: 14px;
+  }
+  .navegacion_logo {
+     font-size: 30px;
+     }
+  .navegacion_enlaces {
+    order: 3;                     
+    flex: none;
+    width: 100%;
+    gap: 22px;
+  }
+  .navegacion_ingresar {
+     margin-left: auto;
+     }
+
+  .contenido_portada { 
+    margin-top: 40px;
+   }
+  .subtitulo {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .portada_titulo { 
+    line-height: 1.15;
+   }
+  .portada_texto {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .texto-seccion {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .nosotros {
+     margin-top: 56px;
+     }
+  .nosotros_texto {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .unetenos {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .oferta-texto {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .manager-tarjeta {
+     padding: 90px 20px 120px;
+     }
+  .manager-texto {
+    font-size: 16px;
+    line-height: 28px;
+  }
+  .manager-comillas {
+    top: 16px;
+    left: 20px;
+    font-size: 120px;
+    line-height: 70px;
+  }
+  .manager-nombre { 
+    font-size: 26px; 
+  }
+  .email-suscribir {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: auto;
+  }
+  .email-suscribir input {
+    height: 58px;
+    padding: 0 20px;
+  }
+  .email-suscribir button {
+    position: static;
+    width: 100%;
+    height: 58px;
+  }
+  .contenido-footer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 56px 0;
+  }
+  .footer-izq p { 
+    max-width: 380px; 
+  }
 }

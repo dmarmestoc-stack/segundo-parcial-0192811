@@ -1,404 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bean Scene</title>
-    <!-- Tipografías necesarias para el diseño -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bean Scene Coffee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Clicker+Script&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
 
-  <!-- Seccion Principal (Hero Header) -->
-  <header class="hero-section">
-    <div class="overlay"></div>
+  <header class="portada" id="inicio">
+    <div class="contenedor">
 
-    <!-- Barra de Navegación -->
-    <nav class="Barrasuperior">
-      <div class="logo">
-        <img src="assets/Parte principal/Bean Scene.png" alt="Bean Scene Logo">
+      <nav class="navegacion">
+        <a class="navegacion_logo" href="#inicio">Bean Scene</a>
+        <ul class="navegacion_enlaces">
+          <li><a href="#inicio">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#nosotros">About Us</a></li>
+          <li><a href="#contacto">Contact Us</a></li>
+        </ul>
+
+        <a class="navegacion_ingresar" href="#ingresar">Sign In</a>
+        <a class="boton-registrar" href="#registrar">Sign Up</a>
+      </nav>
+
+      <div class="contenido_portada">
+        <p class="subtitulo">We’ve got your morning covered with</p>
+        <h1 class="portada_titulo">Coffee</h1>
+        <p class="portada_texto">It is best to start your day with a cup of coffee. Discover the <br>best flavours coffee you will ever have. We provide the best <br>for our customers.</p>
+        <a class="boton" href="#menu">Order Now</a>
       </div>
 
-      <div class="nav-links">
-        <button class="Home btn">Home</button>
-        <button class="Menu btn">Menu</button>
-        <button class="About btn">About Us</button>
-        <button class="Contact btn">Contact Us</button>
-      </div>
-
-      <div class="nav-actions">
-        <button class="Sign btn">Sign In</button>
-        <button class="Signu btn btn-gold">Sign Up</button>
-      </div>
-    </nav>    
-
-    <!-- Contenido Hero (Texto + Boton Order Now) -->
-    <div class="Principal">
-      <p class="hero-subtitle">We’ve got your morning covered with</p>
-      <h1 class="hero-title">Coffee</h1>
-      <p class="hero-description">
-        It is best to start your day with a cup of coffee. Discover the best flavours coffee you will ever have. We provide the best for our customers.
-      </p>
-      <button id="ordenar" class="btn btn-gold">Order Now</button>
     </div>
   </header>
-  <!-- Sección Promoción -->
-<section class="Promocion">
-  <!-- Mancha de café decorativa (abajo a la izquierda) -->
-  <img src="assets/Descripcion/coffee_blast (1).png" alt="Decoración café" class="promocion-splash">
 
-  <div class="promocion-contenedor">
-    <!-- Columna Izquierda: Textos y Botón -->
-    <div class="promocion-texto">
-      <h2>Discover the best coffee</h2>
-      <p>
-        Bean Scene is a coffee shop that provides you with quality coffee that helps boost your productivity and helps build your mood. Having a cup of coffee is good, but having a cup of real coffee is greater. There is no doubt that you will enjoy this coffee more than others you have ever tasted.
-      </p>
-      <button class="btn-gold masinfo">Learn More</button>
-    </div>
-
-    <!-- Columna Derecha: Taza hecha de granos -->
-    <div class="promocion-imagen">
-      <img src="assets/Descripcion/Mask group.png" alt="Taza de cafe">
-    </div>
-  </div>
-</section>
-<!-- Sección Catálogo -->
-<section class="Catalogo">
-  <!-- Encabezado de la Sección -->
-  <div class="catalogo-header">
-    <h2>Enjoy a new blend of coffee style</h2>
-    <p>Explore all flavours of coffee with us. There is always a new cup worth experiencing</p>
-  </div>
-
-  <!-- Grilla de Productos -->
-  <div class="contenedor-productos">
-
-    <!-- Tarjeta 1: Cappuccino -->
-    <div class="tarjeta-producto">
-      <div class="tarjeta-imagen">
-        <img src="assets/Catalogo/Rectangle 7.png" alt="Cappuccino">
-      </div>
-      <div class="tarjeta-cuerpo">
-        <h3 class="tarjeta-titulo">Cappuccino</h3>
-        <p class="tarjeta-descripcion">Coffee 50% | Milk 50%</p>
-        <span class="tarjeta-precio">$8.50</span>
-        <button class="btn-gold btn-tarjeta">Order Now</button>
-      </div>
-    </div>
-
-    <!-- Tarjeta 2: Chai Latte -->
-    <div class="tarjeta-producto">
-      <div class="tarjeta-imagen">
-        <img src="assets/Catalogo/Rectangle 9.png" alt="Chai Latte">
-      </div>
-      <div class="tarjeta-cuerpo">
-        <h3 class="tarjeta-titulo">Chai Latte</h3>
-        <p class="tarjeta-descripcion">Coffee 50% | Milk 50%</p>
-        <span class="tarjeta-precio">$8.50</span>
-        <button class="btn-gold btn-tarjeta">Order Now</button>
-      </div>
-    </div>
-
-    <!-- Tarjeta 3: Macchiato -->
-    <div class="tarjeta-producto">
-      <div class="tarjeta-imagen">
-        <img src="assets/Catalogo/Rectangle 11.png" alt="Macchiato">
-      </div>
-      <div class="tarjeta-cuerpo">
-        <h3 class="tarjeta-titulo">Macchiato</h3>
-        <p class="tarjeta-descripcion">Coffee 50% | Milk 50%</p>
-        <span class="tarjeta-precio">$8.50</span>
-        <button class="btn-gold btn-tarjeta">Order Now</button>
-      </div>
-    </div>
-
-    <!-- Tarjeta 4: Expresso -->
-    <div class="tarjeta-producto">
-      <div class="tarjeta-imagen">
-        <img src="assets/Catalogo/Rectangle 13.png" alt="Expresso">
-      </div>
-      <div class="tarjeta-cuerpo">
-        <h3 class="tarjeta-titulo">Expresso</h3>
-        <p class="tarjeta-descripcion">Coffee 50% | Milk 50%</p>
-        <span class="tarjeta-precio">$8.50</span>
-        <button class="btn-gold btn-tarjeta">Order Now</button>
-      </div>
-    </div>
-
-  </div>
-</section>
-<!-- Sección Por Qué Somos Diferentes -->
-<section class="Plus">
-  <!-- Mancha de café decorativa (esquina superior derecha) -->
-  <img src="assets/Plus/coffee_blast (2).png" alt="Decoración café" class="plus-splash">
-
-  <!-- Encabezado de la Sección -->
-  <div class="plus-header">
-    <h2>Why are we different?</h2>
-    <p class="plus-subtitle">We don’t just make your coffee, we make your day!</p>
-  </div>
-
-  <!-- Grilla de Tarjetas de Características -->
-  <div class="contenedor-features">
-
-    <!-- Tarjeta 1 (Resaltada con fondo más cálido) -->
-    <div class="tarjeta-feature destacada">
-      <div class="feature-icono">
-        <img src="assets/Plus/coffee-beans 1.png" alt="Supreme Beans">
-      </div>
-      <h3>Supreme Beans</h3>
-      <p>Beans that provides great taste</p>
-    </div>
-
-    <!-- Tarjeta 2 -->
-    <div class="tarjeta-feature">
-      <div class="feature-icono">
-        <img src="assets/Plus/badge 1.png" alt="High Quality">
-      </div>
-      <h3>High Quality</h3>
-      <p>We provide the highest quality</p>
-    </div>
-
-    <!-- Tarjeta 3 -->
-    <div class="tarjeta-feature">
-      <div class="feature-icono">
-        <img src="assets/Plus/coffee-cup 1.png" alt="Extraordinary">
-      </div>
-      <h3>Extraordinary</h3>
-      <p>Coffee like you have never tasted</p>
-    </div>
-
-    <!-- Tarjeta 4 -->
-    <div class="tarjeta-feature">
-      <div class="feature-icono">
-        <img src="assets/Plus/best-price 1.png" alt="Affordable Price">
-      </div>
-      <h3>Affordable Price</h3>
-      <p>Our Coffee prices are easy to afford</p>
-    </div>
-
-  </div>
-
-  <!-- Bloque de Llamado a la Acción (CTA) inferior -->
-  <div class="plus-cta">
-    <p>Great ideas start with great coffee, Lets help you achieve that</p>
-    <h3>Get started today.</h3>
-    <button class="btn-gold unirse">Join Us</button>
-  </div>
-</section>
-<!-- SECCIÓN ORDENAR (AMAZING MORNING) -->
-<section class="Ordenar">
-  <!-- Columna Izquierda: Texto y Botón -->
-  <div class="ordenar-contenido">
-    <h2>Get a chance to have an<br>Amazing morning</h2>
-    <p>We are giving you are one time opportunity to<br>experience a better life with coffee.</p>
-    <button class="Comprar btn btn-gold">Order Now</button>
-  </div>
-
-  <!-- Columna Derecha: Imágenes (Los granos van primero en el HTML para la capa inferior) -->
-  <div class="ordenar-imagenes">
-    <img src="assets/Ordenar/coffee_bean.png" alt="Granos de café" class="granos-cafe">
-    <img src="assets/Ordenar/cup.png" alt="Vaso de café" class="vaso-cafe">
-  </div>
-</section>
-<!-- SECCIÓN TESTIMONIOS -->
-<section class="sec-testimonios">
-  <!-- Mancha decorativa en la esquina inferior izquierda del fondo -->
-  <img src="assets/Managerc/coffee_blast (4).png" alt="Decoración café" class="mancha-fondo-inferior">
-
-  <!-- Encabezado de la Sección -->
-  <div class="testimonio-header">
-    <h2 class="testimonio-titulo-sec">Our coffee perfection feedback</h2>
-    <p class="testimonio-subtitulo-sec">Our customers has amazing things to say about us</p>
-  </div>
-
-  <!-- Contenedor Principal (Tarjeta + Flechas) -->
-  <div class="testimonio-box-wrapper">
-    
-    <!-- Botón Flecha Izquierda -->
-    <button class="btn-flecha flecha-izquierda" type="button" aria-label="Anterior">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#603813" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M15 18l-6-6 6-6"/>
-      </svg>
-    </button>
-
-    <!-- Tarjeta Beige Central -->
-    <div class="tarjeta-opiniones">
-      <!-- Mancha de café superior derecha (Anclada a la esquina de la tarjeta) -->
-      <img src="assets/Managerc/coffee_blast (3).png" alt="Decoración café" class="mancha-tarjeta-superior">
-
-      <!-- Comilla decorativa superior izquierda -->
-      <img src="assets/Managerc/“.png" alt="Comilla" class="icono-comilla-cita">
-
-      <!-- Texto del Testimonio -->
-      <p class="texto-opinion">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset.....
-      </p>
-
-      <!-- Información del Autor -->
-      <div class="autor-box">
-        <h3 class="autor-nombre">Jonny Thomas</h3>
-        <p class="autor-cargo">Project Manager</p>
-      </div>
-
-      <!-- Foto de Perfil Flotante en la Base -->
-      <div class="autor-avatar-wrapper">
-        <img src="assets/Managerc/Rectangle 9 (2).png" alt="Jonny Thomas">
-      </div>
-    </div>
-
-    <!-- Botón Flecha Derecha -->
-    <button class="btn-flecha flecha-derecha" type="button" aria-label="Siguiente">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#603813" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M9 18l6-6-6-6"/>
-      </svg>
-    </button>
-
-  </div>
-</section>
-<!-- SECCIÓN SUSCRIPCIÓN Y FOOTER -->
-
-<section class="footer-seccion">
-
-    <!-- BANNER DE SUSCRIPCIÓN -->
-    <div class="suscribir-banner">
-
-        <div class="suscribir-overlay"></div>
-
-        <!-- TAZA IZQUIERDA: IMAGEN INTERCAMBIADA -->
-        <img
-            src="assets/Buscador y ft/pngwing 1.png"
-            alt="Taza de café izquierda"
-            class="taza-decorativa taza-izq"
-        >
-
-        <!-- TAZA DERECHA: IMAGEN INTERCAMBIADA -->
-        <img
-            src="assets/Buscador y ft/pngwing 2.png"
-            alt="Taza de café derecha"
-            class="taza-decorativa taza-der"
-        >
-
-        <div class="suscribir-contenido">
-
-            <h2 class="suscribir-titulo">
-                Subscribe to get the Latest News
-            </h2>
-
-            <p class="suscribir-subtitulo">
-                Don’t miss out on our latest news, updates, tips and special offers
-            </p>
-
-            <form class="suscribir-form">
-                <input
-                    type="email"
-                    class="suscribir-input"
-                    placeholder="Enter your mail"
-                    aria-label="Enter your email"
-                    required
-                >
-
-                <button type="submit" class="btn-suscribir">
-                    Subscribe
-                </button>
-            </form>
-
+  <main>
+    <section class="nosotros" id="nosotros">
+      <img class="salpicadura salpicadura_cafe_nosotros" src="assets/Descripcion/coffee_blast (1).png" alt="Salpicadura de café">
+      <div class="contenedor contenedor_nosotros">
+        <div class="contenido_nosotros">
+          <h2 class="titulo-seccion titulo_nosotros">Discover the best coffee</h2>
+          <p class="nosotros_texto">Bean Scene is a coffee shop that provides you with quality coffee <br>that helps boost your productivity and helps build your mood. <br>Having a cup of coffee is good, but having a cup of real coffee is <br>greater. There is no doubt that you will enjoy this coffee more <br>than others you have ever tasted.</p>
+          <a class="boton" href="#plus">Learn More</a>
         </div>
-    </div>
+        <div class="nosotros_foto">
+          <img src="assets/Descripcion/Mask group.png" alt="Taza de cafe">
+        </div>
+      </div>
+    </section>
 
+  
+    <section class="menu" id="menu">
+      <img class="salpicadura salpicadura_cafe_menu" src="assets/Descripcion/coffee_blast (1).png" alt="Salpicadura de café">
+      <div class="contenedor">
+        <h2 class="titulo-seccion">Enjoy a new blend of coffee style</h2>
+        <p class="texto-seccion">Explore all flavours of coffee with us. There is always a new cup worth experiencing</p>
 
-    <!-- FOOTER PRINCIPAL -->
-    <footer class="footer-principal">
-
-        <div class="footer-contenedor">
-
-            <!-- COLUMNA 1 -->
-            <div class="footer-col">
-
-                <img
-                    src="assets/Buscador y ft/Bean Scene.png"
-                    alt="Bean Scene"
-                    class="footer-logo-img"
-                >
-
-                <p class="footer-descripcion">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                </p>
-
-                <img
-                    src="assets/Buscador y ft/Group 54.png"
-                    alt="Redes sociales"
-                    class="footer-redes-img"
-                >
-
+        <div class="cards">
+          <article class="tarjeta">
+            <div class="tarjeta_fotos">
+              <img class="tarjeta_foto" src="assets/Catalogo/Rectangle 7.png" alt="Cappuccino">
+              <h3 class="tarjeta_nombre">Cappuccino</h3>
+              <p class="tarjeta_composicion">Coffee 50% | Milk 50%</p>
+              <p class="tarjeta_precio">$8.50</p>
             </div>
+            <a class="boton" href="#comprar">Order Now</a>
+          </article>
 
-
-            <!-- COLUMNA 2: ABOUT -->
-            <div class="footer-col">
-
-                <h3 class="footer-titulo-col">About</h3>
-
-                <ul class="footer-links">
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">News & Blogs</a></li>
-                    <li><a href="#">Help & Supports</a></li>
-                </ul>
-
+          <article class="tarjeta">
+            <div class="tarjeta_fotos">
+              <img class="tarjeta_foto" src="assets/Catalogo/Rectangle 9.png" alt="Chai Latte">
+              <h3 class="tarjeta_nombre">Chai Latte</h3>
+              <p class="tarjeta_composicion">Coffee 50% | Milk 50%</p>
+              <p class="tarjeta_precio">$8.50</p>
             </div>
+            <a class="boton" href="#comprar">Order Now</a>
+          </article>
 
-
-            <!-- COLUMNA 3: COMPANY -->
-            <div class="footer-col">
-
-                <h3 class="footer-titulo-col">Company</h3>
-
-                <ul class="footer-links">
-                    <li><a href="#">How we work</a></li>
-                    <li><a href="#">Terms of service</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">FAQ</a></li>
-                </ul>
-
+          <article class="tarjeta">
+            <div class="tarjeta_fotos">
+              <img class="tarjeta_foto" src="assets/Catalogo/Rectangle 11.png" alt="Macchiato">
+              <h3 class="tarjeta_nombre">Macchiato</h3>
+              <p class="tarjeta_composicion">Coffee 50% | Milk 50%</p>
+              <p class="tarjeta_precio">$8.50</p>
             </div>
+            <a class="boton" href="#comprar">Order Now</a>
+          </article>
 
-
-            <!-- COLUMNA 4: CONTACT US -->
-            <div class="footer-col">
-
-                <h3 class="footer-titulo-col">Contact Us</h3>
-
-                <p class="contacto-linea">
-                    Akshya Nagar 1st Block 1st Cross,
-                    Rammurthy nagar, Bangalore-560016
-                </p>
-
-                <p class="contacto-linea">
-                    +1 202-918-2132
-                </p>
-
-                <p class="contacto-linea">
-                    beanscene@mail.com
-                </p>
-
-                <p class="contacto-linea">
-                    www.beanscene.com
-                </p>
-
+          <article class="tarjeta">
+            <div class="tarjeta_fotos">
+              <img class="tarjeta_foto" src="assets/Catalogo/Rectangle 13.png" alt="Expresso">
+              <h3 class="tarjeta_nombre">Expresso</h3>
+              <p class="tarjeta_composicion">Coffee 50% | Milk 50%</p>
+              <p class="tarjeta_precio">$8.50</p>
             </div>
+            <a class="boton" href="#comprar">Order Now</a>
+          </article>
+        </div>
+      </div>
+    </section>
 
+   
+    <section class="plus" id="plus">
+      <div class="contenedor">
+        <h2 class="titulo-seccion">Why are we different?</h2>
+        <p class="texto-seccion">We don’t just make your coffee, we make your day!</p>
+
+        <div class="caracteristicas">
+          <article class="caracteristica-plus">
+            <img src="assets/Plus/coffee-beans 1.png" alt="Grano borde negro">
+            <h3>Supreme Beans</h3>
+            <p>Beans that provides <br>great taste</p>
+          </article>
+          <article class="caracteristica">
+            <img src="assets/Plus/badge 1.png" alt="Medalla borde negro">
+            <h3>High Quality</h3>
+            <p>We provide the <br>highest quality</p>
+          </article>
+          <article class="caracteristica">
+            <img src="assets/Plus/coffee-cup 1.png" alt="Taza de café borde negro">
+            <h3>Extraordinary</h3>
+            <p>Coffee like you have <br>never tasted</p>
+          </article>
+          <article class="caracteristica">
+            <img src="assets/Plus/best-price 1.png" alt="Pulgar con moneda borde negro">
+            <h3>Affordable Price</h3>
+            <p>Our Coffee prices are <br>easy to afford</p>
+          </article>
         </div>
 
-    </footer>
+        <p class="unetenos">
+          Great ideas start with great coffee, Lets help you achieve that <br>Get started today.
+        </p>
+        <a class="boton" href="#email">Join Us</a>
+      </div>
+    </section>
 
-</section>
+    <section class="oferta">
+      <div class="contenedor oferta-estructura">
+        <div class="oferta-contenido">
+          <h2 class="oferta-titulo">Get a chance to have an <br>Amazing morning</h2>
+          <p class="oferta-texto">We are giving you are one time opportunity to <br>experience a better life with coffee.</p>
+          <a class="boton" href="#menu">Order Now</a>
+        </div>
+        <img class="granos" src="assets/Ordenar/coffee_bean.png" alt="Borde de granos de café">
+        <img class="mug" src="assets/Ordenar/cup.png" alt="Mug de cafe">
+      </div>
+    </section>
+
+    <section class="manager" id="manager">
+      <div class="contenedor">
+        <h2 class="titulo-seccion">Our coffee perfection feedback</h2>
+        <p class="texto-seccion">Our customers has amazing things to say about us</p>
+
+        <div class="manager-tarjeta">
+          <span class="manager-comillas" aria-hidden="true">“</span>
+          <p class="manager-texto">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has <br>been the industry's standard dummy text ever since the 1500s, when an unknown printer took a <br>galley of type and scrambled it to make a type specimen book. It has survived not only five <br>centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was <br>popularised in the 1960s with the release of Letraset.....</p>
+          <h3 class="manager-nombre">Jonny Thomas</h3>
+          <p class="manager-cargo">Project Manager</p>
+
+          <a class="boton-flecha boton-flecha-izq" href="#testimonios" aria-label="Boton izquierdo">
+            <img src="assets/Managerc/Group 42.png" alt="Flecha izquierda">
+          </a>
+          <a class="boton-flecha boton-flecha-der" href="#testimonios" aria-label="Boton derecho">
+            <img src="assets/Managerc/Group 43.png" alt="Flecha derecha">
+          </a>
+          <img class="manager-foto" src="assets/Managerc/Rectangle 9 (2).png" alt="Jonny Thomas">
+        </div>
+      </div>
+      <img class="salpicadura salpicadura_cafe_2" src="assets/Managerc/coffee_blast (3).png" alt="Salpicadura de café">
+      <img class="salpicadura salpicadura_cafe_3" src="assets/Managerc/coffee_blast (4).png" alt="Salpicadura de café">
+    </section>
+
+    <section class="suscribir" id="suscribir">
+      <div class="suscribir-contenido">
+      <img class="taza taza-suscribir" src="assets/Buscador y ft/pngwing 2.png" alt="Taza de café izquierda">
+      <img class="taza taza2-suscribir" src="assets/Buscador y ft/pngwing 1.png" alt="Taza de café derecha">
+      </div>
+
+      <div class="informacion-suscribir">
+        <div class="seccion-suscribir">
+          <h2 class="titulo-seccion">Subscribe to get the Latest News</h2>
+          <p class="texto-seccion">Don’t miss out on our latest news, updates, tips and special offers</p>
+        </div>
+
+        <form class="email-suscribir" id="email">
+          <input type="email" placeholder="Enter your mail" aria-label="Email" required>
+          <button type="submit">Suscribe</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="footer" id="contacto">
+    <div class="contenido-footer">
+
+      <div class="footer-izq">
+        <div class="logo">Bean Scene</div>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <img class="redes-sociales" src="assets/Buscador y ft/Group 54.png" alt="Facebook, Instagram, YouTube, Twitter">
+      </div>
+
+      <div class="footer-der" style="width:136px">
+        <h4>About</h4>
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#caracteristicas">Features</a></li>
+          <li><a href="#suscribir">News &amp; Blogs</a></li>
+          <li><a href="#contacto">Help &amp; Supports</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-der" style="width:134px">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#work">How we work</a></li>
+          <li><a href="#home">Terms of service</a></li>
+          <li><a href="#precios">Pricing</a></li>
+          <li><a href="#contacto">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div class=" footer-columna footer-contacto">
+        <h4>Contact Us</h4>
+        <address>Akshya Nagar 1st Block 1st Cross, <br>Rammurthy nagar, Bangalore-560016</address>
+        <p class="linea"><a href="tel:+12029182132">+1 202-918-2132</a></p>
+        <p class="linea"><a href="mailto:beanscene@mail.com">beanscene@mail.com</a></p>
+        <p class="linea"><a href="https://www.beanscene.com" target="_blank" rel="noopener">www.beanscene.com</a></p>
+      </div>
+
+    </div>
+  </footer>
+
 </body>
+</html>
